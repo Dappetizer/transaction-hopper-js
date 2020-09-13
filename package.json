@@ -1,0 +1,22 @@
+{
+  "name": "eosio-action-hopper",
+  "version": "1.0.0",
+  "description": "A JavaScript-based Action Hopper for EOSIO Software.",
+  "main": "actionHopper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dappetizer/eosio-action-hopper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dappetizer/eosio-action-hopper/issues"
+  },
+  "homepage": "https://github.com/Dappetizer/eosio-action-hopper#readme",
+  "dependencies": {
+    "eosjs": "^20.0.3"
+  }
+}
