@@ -1,0 +1,23 @@
+{
+  "name": "@dappetizer/transaction-hopper-js",
+  "version": "0.1.0",
+  "description": "A JavaScript based Transaction Hopper for EOSIO software",
+  "main": "hopper.js",
+  "dependencies": {
+    "eosjs": "^20.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dappetizer/transaction-hopper-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dappetizer/transaction-hopper-js/issues"
+  },
+  "homepage": "https://github.com/Dappetizer/transaction-hopper-js#readme"
+}
