@@ -1,4 +1,4 @@
-# eosio-action-hopper
+# Transaction Hopper JS
 A JavaScript based Transaction Hopper for EOSIO software
 
 ## Usage
