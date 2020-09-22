@@ -1,6 +1,6 @@
 {
   "name": "@dappetizer/transaction-hopper-js",
-  "version": "0.1.1",
+  "version": "0.1.22",
   "description": "A JavaScript based Transaction Hopper for EOSIO software",
   "main": "hopper.js",
   "dependencies": {

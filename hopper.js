@@ -15,14 +15,29 @@ module.exports = class TransactionHopper {
         return this.hopper;
     }
 
+    //set actions in hopper
+    setHopper(actions) {
+        this.hopper = actions;
+    }
+
     //return signing account
     getSigner() {
         return this.signer;
     }
 
+    //set a new signer account
+    setSigner(account) {
+        this.signer = account;
+    }
+
     //return signing permission
     getPermission() {
         return this.permission;
+    }
+
+    //set signing permission
+    setPermission(permission) {
+        this.permission = permission;
     }
 
     //load an action into the hopper
@@ -42,10 +57,10 @@ module.exports = class TransactionHopper {
     //     });
     // }
 
-    //view the actions loaded in hopper
-    // view() {
-    //     console.log(this.hopper);
-    // }
+    //print the actions loaded in hopper
+    view() {
+        console.log(this.hopper);
+    }
 
     //clear the hopper
     clear() {
@@ -58,24 +73,25 @@ module.exports = class TransactionHopper {
     // }
 
     //cosign a transaction
-    async cosign() {
+    // async cosign() {
 
-        const res = await this.api.transact({
-            actions: this.getHopper()
-        }, {
-            broadcast: false,
-            sign: true,
-            blocksBehind: 3,
-            expireSeconds: 30,
-        });
+    //     const res = await this.api.transact({
+    //         actions: this.getHopper()
+    //     }, {
+    //         broadcast: false,
+    //         sign: true,
+    //         blocksBehind: 3,
+    //         expireSeconds: 30,
+    //     });
 
-        console.log(res);
+    //     console.log(res);
 
-    }
+    // }
 
     //sign and broadcast contents of hopper
     async fire() {
 
+        //push transaction
         const res = await this.api.transact({
             actions: this.getHopper()
         }, {
@@ -86,15 +102,17 @@ module.exports = class TransactionHopper {
         });
 
         //if trx executed
-        if (res.processed.receipt.status == 'executed') {
-            console.log('Transaction Executed:', res.transaction_id);
-        } else {
-            //TODO: report error
-            console.log('Transaction Error');
-        }
+        // if (res.processed.receipt.status == 'executed') {
+        //     console.log('Transaction Executed:', res.transaction_id);
+        // } else {
+        //     //TODO: report error
+        //     console.log('Transaction Error');
+        // }
 
         //clear hopper
         this.clear();
+
+        return res;
     }
 
 };
